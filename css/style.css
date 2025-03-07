@@ -195,11 +195,31 @@ img {
 .header .container .icon a .close {
     display: none;
     color: #000;
-}.header .container .icon div .lmode,
-.header .container .icon div.dmode{
-    display: block;
+ }/*.header .container .icon a.gear
+{
+    display: none;
     color: #000;
     }
+    .header .container .icon a.dark{
+        display: block;
+        color: #000;
+    }
+    .body:has(#moon:target) .dark{
+display: none;
+    }
+    .body:has(#gear:target) .gear{
+        display: none;
+            } */
+.icon .light{
+    display: none;
+}
+body:has(.icon input:checked) .icon .light{
+    display: block;
+}
+body:has(.icon input:checked) .icon .dark{
+    display: none;
+}
+
 .home {
     padding: var(--section-padding) 0;
     height: 100vh;
@@ -424,14 +444,11 @@ input[type="submit"]:hover {
 .card ul.social-icons {
     
     top: 60px;
-    /* transform: translateY(-50%); */
     right: -100px;
     transition: right 2s 0.01s;
     background-color: #ffffff4d;
     padding: 8px;
     margin-right: 5px;
-
-
     position: absolute;
 }
 
